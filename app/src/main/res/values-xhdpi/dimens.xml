@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fake_news_text_size">32sp</dimen>
+    <dimen name="detection_text_size">28sp</dimen>
+    <dimen name="detection_text_mEnd">8dp</dimen>
+    <dimen name="ss_iv_width">60dp</dimen>
+    <dimen name="ss_iv_height">60dp</dimen>
+    <dimen name="ss_iv_mTop">10dp</dimen>
+    <dimen name="ss_iv_mEnd">10dp</dimen>
+
+    <dimen name="ma_tv_padding">8dp</dimen>
+    <dimen name="ma_tv_elevation">15dp</dimen>
+    <dimen name="ma_tv_textSize">18dp</dimen>
+    <dimen name="ma_layout_mTop">20dp</dimen>
+    <dimen name="ma_view_mTop">20dp</dimen>
+    <dimen name="ma_view_mTSE">10dp</dimen>
+    <dimen name="ma_btn_mBottom">25dp</dimen>
+    <dimen name="ma_margin">8dp</dimen>
+    <dimen name="ma_et_height">250dp</dimen>
+    <dimen name="ma_lottie_width">130dp</dimen>
+    <dimen name="ma_lottie_height">50dp</dimen>
+</resources>

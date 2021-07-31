@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main_screen"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vguide_ma_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.03"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vguide_ma_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.97"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vguide_ma_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.68"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hguide_ma_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.03"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vguide_ma_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.32"/>
+
+    <TextView
+        android:id="@+id/tv_ma_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/vguide_ma_1"
+        app:layout_constraintTop_toBottomOf="@id/hguide_ma_1"
+        app:layout_constraintEnd_toEndOf="@id/vguide_ma_3"
+        android:background="@drawable/text_view_custom_design"
+        android:padding="@dimen/ma_tv_padding"
+        android:fontFamily="@font/sanford"
+        android:elevation="@dimen/ma_tv_elevation"
+        android:textColor="@color/black"
+        android:textSize="@dimen/ma_tv_textSize"
+        android:text="Please Enter News Text You Want to Check, I will help you..."/>
+
+    <LinearLayout
+        android:id="@+id/linearL_ma"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/vguide_ma_4"
+        app:layout_constraintEnd_toEndOf="@id/vguide_ma_2"
+        app:layout_constraintTop_toBottomOf="@id/tv_ma_1"
+        android:layout_marginTop="@dimen/ma_layout_mTop"
+        android:elevation="@dimen/ma_tv_elevation"
+        android:background="@drawable/edit_view_custom_design"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_ma_newsTxt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ma_et_height"
+            android:layout_margin="@dimen/ma_margin"
+            android:textSize="@dimen/ma_tv_textSize"
+            android:fontFamily="@font/sanford"
+            android:background="@android:color/transparent"
+            android:hint="Enter Here..."
+            android:gravity="start"/>
+
+        <Button
+            android:id="@+id/btn_ma_check"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ma_view_mTSE"
+            android:layout_marginEnd="@dimen/ma_view_mTSE"
+            style="@style/Widget.AppCompat.Button"
+            android:fontFamily="@font/sanford"
+            android:textColor="@color/design_default_color_primary"
+            android:background="@drawable/button_custom_design"
+            android:text="Check News"
+            android:textAllCaps="true"/>
+
+        <Button
+            android:id="@+id/btn_ma_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ma_view_mTSE"
+            android:layout_marginEnd="@dimen/ma_view_mTSE"
+            android:layout_marginTop="@dimen/ma_view_mTSE"
+            android:fontFamily="@font/sanford"
+            style="@style/Widget.AppCompat.Button"
+            android:textColor="@color/design_default_color_primary"
+            android:background="@drawable/button_custom_design"
+            android:text="Refresh"
+            android:textAllCaps="true"
+            android:layout_marginBottom="@dimen/ma_btn_mBottom"/>
+
+    </LinearLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnim_ma"
+        android:layout_width="@dimen/ma_lottie_width"
+        android:layout_height="@dimen/ma_lottie_height"
+        app:lottie_rawRes="@raw/loading_anim"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@id/vguide_ma_1"
+        app:layout_constraintTop_toBottomOf="@id/linearL_ma"
+        android:background="@drawable/text_view_custom_design"
+        android:layout_marginTop="@dimen/ma_view_mTop"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_speed="0.5"/>
+
+    <TextView
+        android:id="@+id/tv_ma_result"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/vguide_ma_1"
+        app:layout_constraintEnd_toEndOf="@id/vguide_ma_3"
+        app:layout_constraintTop_toBottomOf="@id/linearL_ma"
+        android:layout_marginTop="@dimen/ma_view_mTop"
+        android:visibility="invisible"
+        android:fontFamily="@font/sanford"
+        android:elevation="@dimen/ma_tv_elevation"
+        android:background="@drawable/text_view_custom_design"
+        android:text="The News is Found to be : \nFAKE"
+        android:textSize="@dimen/ma_tv_textSize"
+        android:textColor="@color/black"
+        android:padding="@dimen/ma_tv_padding"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash"
+    tools:context=".SplashScreen">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vguide_sa_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hguide_sa_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05"/>
+
+    <TextView
+        android:id="@+id/tv_sa_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/hguide_sa_1"
+        app:layout_constraintEnd_toEndOf="@id/vguide_sa_1"
+        android:text="Fake News"
+        android:textAllCaps="true"
+        android:fontFamily="@font/sanford"
+        android:textColor="@color/white"
+        android:textSize="@dimen/fake_news_text_size"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tv_sa_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/vguide_sa_1"
+        app:layout_constraintTop_toBottomOf="@id/tv_sa_1"
+        android:text="Detection"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:fontFamily="@font/sanford"
+        android:textStyle="bold"
+        android:textSize="@dimen/detection_text_size"
+        android:layout_marginEnd="@dimen/detection_text_mEnd"/>
+
+    <ImageView
+        android:layout_width="@dimen/ss_iv_width"
+        android:layout_height="@dimen/ss_iv_height"
+        app:layout_constraintEnd_toStartOf="@id/tv_sa_1"
+        app:layout_constraintTop_toTopOf="@id/hguide_sa_1"
+        android:layout_marginEnd="@dimen/ss_iv_mEnd"
+        android:layout_marginTop="@dimen/ss_iv_mTop"
+        android:src="@drawable/fake_news_icon"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
